@@ -1,5 +1,5 @@
 #include<stdio.h>
-/*
+/**
  * main - Entry point
  *
  * Descreption: a c program that prints with put function
