@@ -5,6 +5,9 @@
   * to the buffer pointed to by dest
   * @dest: input
   * @src: input2
+  * Description: copies the string pointed to by src to
+  * the buffer pointed to by dest
+  * Return: Pointer of dest
 */
 
 char *_strcpy(char *dest, char *src)
