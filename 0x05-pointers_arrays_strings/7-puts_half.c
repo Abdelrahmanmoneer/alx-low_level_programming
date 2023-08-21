@@ -3,6 +3,7 @@
   * puts_half - a function that prints half of a string, followed by a new line
   *
   * @str: input
+  * Description: if odd number of char print (length - 1) / 2
 */
 
 void puts_half(char *str)
@@ -13,7 +14,7 @@ void puts_half(char *str)
 		;
 
 	i++;
-	for (i /= 2; str[i] != '0'; i++)
+	for (i /= 2; str[i] != '\0'; i++)
 	{
 		_putchar(str[i]);
 	}
