@@ -1,28 +1,30 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 /**
   * main - a program that adds positive numbers
-  * @argc: int
-  * @argv: list
+  * @argc: number of command line
+  * @argv: array that contans the program command lines
   * Return: 0 or 1
 */
 
 int main(int argc, char *argv[])
 {
-	int bod = 0;
-	char *y;
+	int i, j, add = 0;
 
-	while (--argc)
+	for (i = 1; i < argc; i++)
 	{
-		for (y = argv[argc]; *y; y++)
+		for (j = 0; argv[i][j] != '0'; j++)
 		{
-			if (*y < '0' || *y > '9')
+			if (!isdigit(argv[i][j]))
+			{
 				printf("Error\n");
-			return (1);
-			bod += atoi(argv[argc]);
+				return (1);
+			}
 		}
-	}
-		printf("%d\n", bod);
-			return (0);
-}
 
+		add += atoi(argv[i]);
+	}
+	printf("%d\n", add);
+	return (0);
+}
