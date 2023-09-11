@@ -1,7 +1,9 @@
 #include <stdio.h>
 
 /**
-  * main - function that prints
+  * main - Entry point
+  *
+  * Description: function that prints
   * the name of thr file followed by new line
   *
   * Return : 0 success
