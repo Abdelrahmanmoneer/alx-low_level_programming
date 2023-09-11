@@ -1,12 +1,9 @@
 #include <stdio.h>
 
 /**
-  * main - Entry point
+  * main - prints the name of the file
   *
-  * description: function that prints
-  * the name of thr file followed by new line
-  *
-  * return : 0 success
+  * Return: Always 0(Success)
 */
 
 int main(void)
