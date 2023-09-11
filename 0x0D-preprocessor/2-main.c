@@ -3,10 +3,10 @@
 /**
   * main - Entry point
   *
-  * Description: function that prints
+  * description: function that prints
   * the name of thr file followed by new line
   *
-  * Return : 0 success
+  * return : 0 success
 */
 
 int main(void)
