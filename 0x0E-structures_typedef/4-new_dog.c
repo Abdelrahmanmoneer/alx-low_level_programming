@@ -1,29 +1,29 @@
-#include "dog.h"
 #include <stdlib.h>
+#include "dog.h"
 
 /**
-  * _strlen - length of string
-  * @str: string
+  * _Strlen - length of string
+  * @Str: string
   * Return: length
 */
 
-int _strlen(const char *str)
+int _Strlen(const char *Str)
 {
-	int len = 0;
+	int length = 0;
 
-	while (*str++)
-		len++;
-	return (len);
+	while (*Str++)
+		length++;
+	return (length);
 }
 
 /**
-  * _strcopy - return dest with copy of src
+  * _Strcopy - return dest with copy of src
   * @src: string to be copyed
   * @dest: string where to be paste in
   * Return: @dest
 */
 
-char *_strcopy(char *dest, char *src)
+char *_Strcopy(char *dest, char *src)
 {
 	int a;
 
@@ -54,16 +54,24 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (dog == NULL)
 		return (NULL);
 
-	dog->name = malloc(sizeof(char) * (_strlen(name) + 1));
-	if (dog->name == NULL)
+	dog->name = malloc(sizeof(char) * (_Strlen(name) + 1));
+	if ((*dog).name == NULL)
 	{
 		free(dog);
 		return (NULL);
 	}
 
-	dog->name = _strcopy(dog->name, name);
+	dog->owner = malloc(sizeof(char) * (_Strlen(owner) + 1));
+	if ((*dog).owner == NULL)
+	{
+		free(dog->name);
+		free(dog);
+		return (NULL);
+	}
+
+	dog->name = _Strcopy(dog->name, name);
 	dog->age = age;
-	dog->owner = _strcopy(dog->owner, owner);
+	dog->owner = _Strcopy(dog->owner, owner);
 
 	return (dog);
 }
