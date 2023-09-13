@@ -24,6 +24,6 @@ int main(int argc, char **argv)
 
 	while (z--)
 		printf("%02hhx%s", *s++, z ? " " : "\n");
-	
+
 	return (0);
 }
